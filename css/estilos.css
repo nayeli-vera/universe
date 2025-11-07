@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0A0F2C, #1A1E45);
+  color: #FFFFFF;
+  line-height: 1.6;
+}
+
+header, main, footer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: rgba(10, 15, 44, 0.95);
+  border-bottom: 2px solid #00E0FF;
+  box-shadow: 0 0 20px #00E0FF;
+  padding: 15px 0;
+  text-align: center;
+  margin-top: 15px;
+  border-radius: 10px 10px 0 0;
+}
+
+header img {
+  width: 80px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #00E0FF;
+  margin-bottom: 10px;
+}
+
+header nav {
+  background-color: rgba(122, 0, 255, 0.2);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 5px;
+}
+
+header nav ul li a {
+  display: block;
+  padding: 12px 25px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  transition: 0.3s;
+  border-radius: 20px;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  background-color: rgba(0, 224, 255, 0.15);
+  border: 1px solid #00E0FF;
+  color: #00E0FF;
+  text-shadow: 0 0 10px #00E0FF;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0;
+}
+
+.main .articles {
+  width: 68%;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 224, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 224, 255, 0.2);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.main .articles article {
+  margin-bottom: 30px;
+}
+
+.main .articles h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #00E0FF;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.main .articles p {
+  text-align: justify;
+  margin-bottom: 15px;
+  color: #E5E5E5;
+}
+
+aside {
+  width: 28%;
+  background: rgba(10, 15, 44, 0.6);
+  border: 1px solid rgba(0, 224, 255, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 224, 255, 0.3);
+}
+
+aside h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.3em;
+  color: #00E0FF;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #7A00FF;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+aside p {
+  font-size: 0.95em;
+  color: #CCCCCC;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #0A0F2C;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 15px;
+  border-top: 2px solid #00E0FF;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 -5px 15px rgba(0, 224, 255, 0.2);
+  margin-bottom: 20px;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #00E0FF;
+  color: #0A0F2C;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #7A00FF;
+  color: #FFFFFF;
+  box-shadow: 0 0 15px #7A00FF;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #00E0FF;
+  padding: 10px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+th {
+  background-color: rgba(0, 224, 255, 0.2);
+}
+
+a {
+  color: #00E0FF;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #7A00FF;
+  text-shadow: 0 0 10px #7A00FF;
+}
+
+img.responsive {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #00E0FF;
+  margin: 15px 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body.historia h2 { color: #00E0FF; }
+body.innovaciones h2 { color: #7A00FF; }
+body.influencia h2 { color: #00C8FF; }
+body.datos h2 { color: #33CCFF; }
+body.recursos h2 { color: #33DFFF; }
+
+@media (max-width: 900px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main .articles, aside {
+    width: 100%;
+  }
+
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav ul li a {
+    margin: 5px 0;
+  }
+}
